@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tip Calculator</title>
+        
+        <link rel="stylesheet" href="Tip.css">
+        
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Trirong:wght@200&display=swap" rel="stylesheet">
+
+        
+        <!--Bootstrap  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        
+        <script src="https://kit.fontawesome.com/edaf8af6e5.js" crossorigin="anonymous" >
+           
+
+            function tip()
+            {
+                const form = document.getElementById('form');
+
+                form.addEventListener("submit", function(event)
+                {
+                event.preventDefault();
+                })
+
+               let am=document.getElementById("amount").value;
+            
+               if(am>0)
+               {    
+                
+               am=Math.round(am);
+               
+               let exp=document.getElementById("experience").value;
+               let pep=document.getElementById("people").value;
+               if(pep%1==0 && pep>0)
+               {
+               
+
+               var tips;
+
+               
+               tips= ((am*exp)/100)/pep;
+               document.getElementById("text").innerHTML="Your tip amount per person is: Rs. "+tips;   
+               }
+               else
+               {
+                   alert("Enter a valid number");
+               }
+            }
+               else
+               {
+                alert("Enter a valid number");  
+               } 
+
+            }
+        
+        </script>
+    </head>
+    <body id="title">
+        <form id=form class=form>
+            <h1>Tip Calculator &nbsp;<i class="fas fa-concierge-bell"></i>
+            </h1>    
+            
+            <br>
+            <h3>Bill Amount: <input type="number" id=amount></h3>
+            <br>
+            <br>
+            
+            <h3><label for="hotel">How was the service:</label>
+            <select id="experience" name="hotel">
+                <option value="20">Excellent (20%)</option>
+                <option value="10">Good (10%)</option>
+                <option value="5">Not so good (5%)</option>
+            </select>
+            </h3>
+
+            <br>
+            <br>
+
+            <h3>Number of people: <input type="number" id=people></h3>
+            <br>
+            <button id=submit onclick=tip() type="button" class="btn btn-outline-primary">Calculate</button> &nbsp; &nbsp;
+            <button id=button2 type="reset" class="btn btn-outline-danger">Reset</button>
+            <br>
+            <br>
+            <h3> <span id=text></span></h3> 
+        </form>
+
+        
+        
+       
+
+    </body>
+</html>
