@@ -25,10 +25,10 @@
             {
                 const form = document.getElementById('form');
 
-                form.addEventListener("submit", function(event)
-                {
-                event.preventDefault();
-                })
+             // form.addEventListener("submit", function(event)
+               // {
+               // event.preventDefault();
+               // }) 
 
                let am=document.getElementById("amount").value;
             
@@ -60,7 +60,7 @@
                } 
 
             }
-        
+      
         </script>
         <script src="https://kit.fontawesome.com/edaf8af6e5.js" crossorigin="anonymous"></script>
         
@@ -90,12 +90,21 @@
             <br>
             
             <button onclick="tip()" id=submit  type="button" class="btn btn-outline-primary">Calculate</button> &nbsp; &nbsp;
-            <button id=button2 type="reset" class="btn btn-outline-danger">Reset</button>
+           
+            <button id=button2 type="reset" class="btn btn-outline-danger">Clear</button>
+            <br>
+           
             <br>
             <br>
-            <h3> <span id=text></span></h3> 
+            <h3> <span id="text"></span></h3>
+            <br>
+            <button onClick="history.go(0); type="button" class="btn btn-outline-warning id="refresh" >Reset</button>
+           
+
+
         </form>
 
+        
         
        
 

@@ -5,7 +5,7 @@
    margin-right: 30%;
    margin-top:10%;
    text-align: center;
-   line-height: 20px;
+   line-height: 15px;
    font-size: larger;
    padding: 50px 50px;
    color:black;
@@ -50,4 +50,11 @@ h3
 #button2
 {
     font-size:20px;
+}
+
+#text
+{
+  border-top: solid;
+  border-width: 1px;
+
 }
