@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+            
+            function findFirst( )
+            {   
+                var array=["3","5","4","2","1"];
+            
+                var unique=0;
+            
+                for(let i=0;i<array.length;i++)
+                {   
+                    
+                    
+                    for(let j=0;j<array.length;j++)
+                    {   
+
+                             
+                           if((i!=j) && (array[i]===array[j]))
+                           {
+                               break;
+                           }
+
+                           else if(j < array.length)
+                           {
+                             unique= array[i];
+                           }
+
+                           else if (j===(array.length-1))
+                           {
+                            //document.getElementById("text").innerHTML="The unique number in an array is"+unique;
+                            console.log(unique);
+                            break;
+                           }
+                       
+                       
+                    }
+                         
+                
+                }
+             }
+
+        </script>
+
+    </head>
+    <body>
+        <button type="button" onclick="findFirst()"> Click me</button>
+        <span id="text"></span>
+        
+    </body>
+</html>
+
